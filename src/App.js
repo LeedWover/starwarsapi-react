@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router  } from "react-router-dom";
 import "./App.css";
 
 import Nav from './components/Navigation';
@@ -10,10 +10,10 @@ function App() {
     <Router>
       <Nav />
       <div className="App container">
-      <Switch>
-      <Route exact path="/characters" component={Characters} />
+        <Switch>
+        <Route exact path="/characters" component={Characters} />
         <Route path="/" render={() => <div>Home</div>} />
-      </Switch>
+        </Switch>
       </div>
     </Router>
   );

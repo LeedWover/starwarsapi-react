@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState }  from 'react';
 
-import {
-  Link
-} from "react-router-dom";
-
-function Character({name, url}) {
+function Character({char, url}) {
+  const [info, setInfo] = useState(false)
+  
   return (
     <div>
-      <Link to={url}>{name}</Link>
+      <div onClick={() => setInfo(!info)}>{char.name}</div>
+      {info ? (
+        <>
+          <div>{char.gender}</div>
+          <div>{char.height}</div>
+        </>
+      ) : null}
     </div>
   )
 }
