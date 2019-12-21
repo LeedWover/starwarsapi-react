@@ -5,11 +5,11 @@ function Character({char, url}) {
   
   return (
     <div>
-      <div onClick={() => setInfo(!info)}>{char.name}</div>
+      <div onClick={() => setInfo(!info)} style={{fontSize: '2em', cursor: 'pointer'}}>{!info ? <i class="fas fa-sort-down"></i> : <i class="fas fa-sort-up"></i> } {char.name} {!info ? <i class="fas fa-sort-down"></i> : <i class="fas fa-sort-up"></i> }</div>
       {info ? (
         <>
-          <div>{char.gender}</div>
-          <div>{char.height}</div>
+          <div>Gender: {char.gender}</div>
+          <div>Height: {char.height}</div>
         </>
       ) : null}
     </div>

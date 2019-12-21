@@ -1,4 +1,9 @@
+body {
+  background-image: url('./assets/background2.jpg');
+}
+
 .App {
+  color: #fff;
   text-align: center;
 }
 
