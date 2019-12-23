@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 
 import Spinner from "../Spinner";
 import Character from "./Character";
-import { getAllCharacters } from "../api";
+import { getData } from "../api";
 
 function Characters() {
   const [url, setUrl] = useState("https://swapi.co/api/people/");
   const [allCharacters, setCharacters] = useState([]);
 
   useEffect(() => {
-    getAllCharacters(url).then(data => {
+    getData(url).then(data => {
       setCharacters(data);
     });
   }, [url]);
@@ -19,7 +19,7 @@ function Characters() {
       {allCharacters.results ? (
         <ul>
           {allCharacters.results.map(character => (
-            <Character char={character} url={character.url} />
+            <Character key={character.name} char={character} />
           ))}
         </ul>
       ) : (
