@@ -29,7 +29,7 @@ function Character({ char }) {
           {info ? (
             <div className="card-action">
               <Link to={`/character-info?url=${char.url}`}>Character Info</Link>
-              <Link to={`/character-info?url=${char.homeworld}`}>
+              <Link to={`/planet-info?url=${char.homeworld}`}>
                 Home World
               </Link>
             </div>
