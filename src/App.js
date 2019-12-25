@@ -7,6 +7,8 @@ import Characters from "./components/Characters";
 import CharacterInfo from "./components/CharacterInfo";
 import Planets from "./components/Planets";
 import PlanetInfo from "./components/PlanetInfo";
+import Films from "./components/Films";
+import FilmInfo from "./components/FilmInfo";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route exact path="/character-info" component={CharacterInfo} />
         <Route exact path="/planets" component={Planets} />
         <Route exact path="/planet-info" component={PlanetInfo} />
+        <Route exact path="/films" component={Films} />
+        <Route exact path="/film-info" component={FilmInfo} />
         <Route path="/" render={() => <div>Home</div>} />
         </Switch>
       </div>

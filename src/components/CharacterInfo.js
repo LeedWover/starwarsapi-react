@@ -35,7 +35,7 @@ function CharacterInfo({ location }) {
         <li>Films:</li>
         {films.map(film => (
           <li key={film.title}>
-            <Link to={`/`}>{film.title}</Link>
+            <Link to={`/film-info/?url=${film.url}`}>{film.title}</Link>
           </li>
         ))}
       </ul>

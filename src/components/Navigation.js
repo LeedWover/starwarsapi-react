@@ -43,6 +43,14 @@ function Navigation() {
                 Planets
               </Link>
             </li>
+            <li>
+              <Link
+                to="/films"
+                style={{ fontSize: "2.4em", color: "#E6AB03" }}
+              >
+                Films
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -55,6 +63,9 @@ function Navigation() {
         </li>
         <li>
           <Link to="/planets">Planets</Link>
+        </li>
+        <li>
+          <Link to="/films">Films</Link>
         </li>
       </ul>
     </>
