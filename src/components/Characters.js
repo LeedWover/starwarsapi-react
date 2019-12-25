@@ -26,16 +26,18 @@ function Characters() {
       )}
       {allCharacters.previous ? (
         <button
-          className="waves-effect orange darken-3 waves-light btn-small left"
+          className="waves-effect waves-light btn-small left"
           onClick={() => setUrl(allCharacters.previous)}
+          style={{ background: "#E6AB03" }}
         >
           Previous
         </button>
       ) : null}
       {allCharacters.next ? (
         <button
-          className="waves-effect orange darken-3 waves-light btn-small right"
+          className="waves-effect waves-light btn-small right"
           onClick={() => setUrl(allCharacters.next)}
+          style={{ background: "#E6AB03" }}
         >
           Next
         </button>
