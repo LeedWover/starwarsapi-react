@@ -26,14 +26,14 @@ function Planet({ planet }) {
               <Arrow info={info} />
             </span>
           </div>
-          {/* {info ? (
+          {info ? (
             <div className="card-action">
-              <Link to={`/character-info?url=${planet.url}`}>Character Info</Link>
-              <Link to={`/character-info?url=${planet.homeworld}`}>
+              <Link to={`/planet-info?url=${planet.url}`}>Planet Info</Link>
+              <Link to={`/planet-info?url=${planet.homeworld}`}>
                 Home World
               </Link>
             </div>
-          ) : null} */}
+          ) : null}
         </div>
       </div>
     </div>
