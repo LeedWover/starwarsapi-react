@@ -15,6 +15,9 @@ function Planets() {
 
   return (
     <div className="row">
+      <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
+        Planets
+      </h2>
       {allPlanets.results ? (
         <ul>
           {allPlanets.results.map(planet => (

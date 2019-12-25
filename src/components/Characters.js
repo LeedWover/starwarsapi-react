@@ -15,6 +15,9 @@ function Characters() {
 
   return (
     <div className="row">
+      <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
+        Characters
+      </h2>
       {allCharacters.results ? (
         <ul>
           {allCharacters.results.map(character => (

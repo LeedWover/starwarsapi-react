@@ -15,6 +15,9 @@ function Films() {
 
   return (
     <div className="row">
+      <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
+        Films
+      </h2>
       {allFilms.results ? (
         <ul>
           {allFilms.results.map(film => (
