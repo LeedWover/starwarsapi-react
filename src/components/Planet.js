@@ -29,9 +29,6 @@ function Planet({ planet }) {
           {info ? (
             <div className="card-action">
               <Link to={`/planet-info?url=${planet.url}`}>Planet Info</Link>
-              <Link to={`/planet-info?url=${planet.homeworld}`}>
-                Home World
-              </Link>
             </div>
           ) : null}
         </div>
