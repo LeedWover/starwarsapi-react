@@ -15,7 +15,7 @@ function Films() {
   }, [url]);
 
   return (
-    <div>
+    <div className="row">
       {allFilms.results ? (
         <ul>
           {allFilms.results.map(film => (
@@ -27,7 +27,7 @@ function Films() {
       )}
       {allFilms.previous ? (
         <button
-          className="waves-effect waves-light btn-small left"
+          className="waves-effect orange darken-3 waves-light btn-small left"
           onClick={() => setUrl(allFilms.previous)}
         >
           Previous
@@ -35,7 +35,7 @@ function Films() {
       ) : null}
       {allFilms.next ? (
         <button
-          className="waves-effect waves-light btn-small right"
+          className="waves-effect orange darken-3 waves-light btn-small right"
           onClick={() => setUrl(allFilms.next)}
         >
           Next

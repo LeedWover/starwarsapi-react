@@ -15,7 +15,7 @@ function Characters() {
   }, [url]);
 
   return (
-    <div>
+    <div className="row">
       {allCharacters.results ? (
         <ul>
           {allCharacters.results.map(character => (
@@ -27,7 +27,7 @@ function Characters() {
       )}
       {allCharacters.previous ? (
         <button
-          className="waves-effect waves-light btn-small left"
+          className="waves-effect orange darken-3 waves-light btn-small left"
           onClick={() => setUrl(allCharacters.previous)}
         >
           Previous
@@ -35,7 +35,7 @@ function Characters() {
       ) : null}
       {allCharacters.next ? (
         <button
-          className="waves-effect waves-light btn-small right"
+          className="waves-effect orange darken-3 waves-light btn-small right"
           onClick={() => setUrl(allCharacters.next)}
         >
           Next

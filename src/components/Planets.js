@@ -15,7 +15,7 @@ function Planets() {
   }, [url]);
 
   return (
-    <div>
+    <div className="row">
       {allPlanets.results ? (
         <ul>
           {allPlanets.results.map(planet => (
@@ -27,7 +27,7 @@ function Planets() {
       )}
       {allPlanets.previous ? (
         <button
-          className="waves-effect waves-light btn-small left"
+          className="waves-effect orange darken-3 waves-light btn-small left"
           onClick={() => setUrl(allPlanets.previous)}
         >
           Previous
@@ -35,7 +35,7 @@ function Planets() {
       ) : null}
       {allPlanets.next ? (
         <button
-          className="waves-effect waves-light btn-small right"
+          className="waves-effect orange darken-3 waves-light btn-small right"
           onClick={() => setUrl(allPlanets.next)}
         >
           Next
