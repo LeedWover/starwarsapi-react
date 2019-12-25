@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Arrow from "./utils/Arrow";
 
-function Character({ char }) {
+function Planet({ planet }) {
   const [info, setInfo] = useState(false);
 
   return (
@@ -21,23 +21,23 @@ function Character({ char }) {
             <span className="card-title">
               <Arrow info={info} />
               {" "}
-              { char.name }
+              { planet.name }
               {" "}
               <Arrow info={info} />
             </span>
           </div>
-          {info ? (
+          {/* {info ? (
             <div className="card-action">
-              <Link to={`/character-info?url=${char.url}`}>Character Info</Link>
-              <Link to={`/character-info?url=${char.homeworld}`}>
+              <Link to={`/character-info?url=${planet.url}`}>Character Info</Link>
+              <Link to={`/character-info?url=${planet.homeworld}`}>
                 Home World
               </Link>
             </div>
-          ) : null}
+          ) : null} */}
         </div>
       </div>
     </div>
   );
 }
 
-export default Character;
+export default Planet;

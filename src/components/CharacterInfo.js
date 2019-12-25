@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { getData } from "../api";
 
-function CharacterInfo(props) {
-    const url = props.location.search.split('=')[1]
+function CharacterInfo({ location }) {
+    const url = location.search.split('=')[1]
     const [characterInformations, setCharacterInfo] = useState({});
 
     useEffect(() => {

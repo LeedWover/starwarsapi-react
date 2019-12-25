@@ -35,6 +35,14 @@ function Navigation() {
                 Characters
               </Link>
             </li>
+            <li>
+              <Link
+                to="/planets"
+                style={{ fontSize: "2.4em", color: "#E6AB03" }}
+              >
+                Planets
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
