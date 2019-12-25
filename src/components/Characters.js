@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Spinner from "../Spinner";
+import Spinner from "./utils/Spinner";
 import Character from "./Character";
 import { getData } from "../api";
 
@@ -9,9 +9,8 @@ function Characters() {
   const [allCharacters, setCharacters] = useState([]);
 
   useEffect(() => {
-    getData(url).then(data => {
-      setCharacters(data);
-    });
+    setCharacters([]);
+    getData(url).then(data => setCharacters(data));
   }, [url]);
 
   return (

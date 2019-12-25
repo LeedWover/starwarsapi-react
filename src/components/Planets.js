@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Spinner from "../Spinner";
+import Spinner from "./utils/Spinner";
 import Planet from "./Planet";
 import { getData } from "../api";
 
@@ -9,9 +9,8 @@ function Planets() {
   const [allPlanets, setPlanets] = useState([]);
 
   useEffect(() => {
-    getData(url).then(data => {
-      setPlanets(data);
-    });
+    setPlanets([]);
+    getData(url).then(data => setPlanets(data));
   }, [url]);
 
   return (
@@ -27,16 +26,18 @@ function Planets() {
       )}
       {allPlanets.previous ? (
         <button
-          className="waves-effect orange darken-3 waves-light btn-small left"
+          className="waves-effect waves-light btn left"
           onClick={() => setUrl(allPlanets.previous)}
+          style={{ background: "#E6AB03" }}
         >
           Previous
         </button>
       ) : null}
       {allPlanets.next ? (
         <button
-          className="waves-effect orange darken-3 waves-light btn-small right"
+          className="waves-effect waves-light btn right"
           onClick={() => setUrl(allPlanets.next)}
+          style={{ background: "#E6AB03" }}
         >
           Next
         </button>

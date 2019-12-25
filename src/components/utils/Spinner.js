@@ -1,10 +1,9 @@
 import React from 'react';
 
+
 function Spinner() {
   return (
-    <div>
-        Loading...
-    </div>
+    <div className="lds-facebook"><div></div><div></div><div></div></div>
   )
 }
 

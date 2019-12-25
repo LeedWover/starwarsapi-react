@@ -12,7 +12,7 @@ function Navigation() {
             className="brand-logo"
             style={{ padding: "0.15em 0 0 0.7em" }}
           >
-            <img src={Icon} style={{ height: "1em" }} />
+            <img src={Icon} alt="logo" style={{ height: "1em" }} />
           </Link>
 
           <a href="#" data-target="mobile" className="sidenav-trigger">

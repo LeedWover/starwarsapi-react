@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Spinner from "../Spinner";
+import Spinner from "./utils/Spinner";
 import Film from "./Film";
 import { getData } from "../api";
 
@@ -9,9 +9,8 @@ function Films() {
   const [allFilms, setFilms] = useState([]);
 
   useEffect(() => {
-    getData(url).then(data => {
-      setFilms(data);
-    });
+    setFilms([]);
+    getData(url).then(data => setFilms(data));
   }, [url]);
 
   return (
