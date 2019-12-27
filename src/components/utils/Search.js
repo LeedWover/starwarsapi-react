@@ -18,7 +18,7 @@ function Search({ type, def,  set }) {
     <form onSubmit={handleSubmit} className="col s12">
       <div className="row">
       <div className="input-field col s1 offset-s1">
-          <input onClick={clearSearch} type="button" value="Clear" className="btn red darken-4" />
+          <input onClick={clearSearch} type="button" value="Clear" className="btn red accent-4" />
         </div>
         <div className="input-field col s8">
           <input
@@ -31,7 +31,7 @@ function Search({ type, def,  set }) {
           />
         </div>
         <div className="input-field col s1">
-          <input type="submit" value="Search" className="btn" />
+          <input type="submit" value="Search" className="btn" style={{ background: "#E6AB03" }} />
         </div>
       </div>
     </form>
