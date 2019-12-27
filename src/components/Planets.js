@@ -15,7 +15,7 @@ function Planets() {
 
   return (
     <div className="row">
-      <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
+      <h2 className="custom-font title-color">
         Planets
       </h2>
       {allPlanets.results ? (

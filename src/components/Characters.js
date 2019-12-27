@@ -17,7 +17,7 @@ function Characters() {
 
   return (
     <div className="row">
-      <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
+      <h2  className="custom-font title-color">
         Characters
       </h2>
       <SearchBar type="characters" set={setUrl} def={defUrl} />

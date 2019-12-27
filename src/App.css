@@ -12,8 +12,12 @@ body {
   pointer-events: none;
 }
 
-.Custom-font {
+.custom-font {
   font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.title-color {
+  color: #E6AB03;
 }
 
 @media (prefers-reduced-motion: no-preference) {

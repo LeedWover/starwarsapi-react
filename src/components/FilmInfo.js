@@ -18,7 +18,7 @@ function FilmInfo({ location }) {
     <div>
       {filmInformations ? (
         <>
-          <h2 className="Custom-font" style={{ color: '#E6AB03' }}>{filmInformations.title}</h2>
+          <h2 className="custom-font title-color">{filmInformations.title}</h2>
           <div>- Director: {filmInformations.director}</div>
           <div>- Producers: {filmInformations.producer}</div>
           <div>- Release date: {filmInformations.release_date}</div>

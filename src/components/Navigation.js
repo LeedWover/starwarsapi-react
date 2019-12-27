@@ -20,7 +20,7 @@ function Navigation() {
           </a>
           <ul
             id="nav-mobile"
-            className="right hide-on-med-and-down Custom-font"
+            className="right hide-on-med-and-down custom-font"
           >
             <li>
               <Link to="/" style={{ fontSize: "2.4em", color: "#E6AB03" }}>

@@ -15,7 +15,7 @@ function PlanetInfo({ location }) {
     <div>
       {planetInformations ? (
         <>
-          <h3>{planetInformations.name}</h3>
+          <h2 className="custom-font title-color">{planetInformations.name}</h2>
           <div>
             This planet's rotation period is{" "}
             {planetInformations.rotation_period} hours.

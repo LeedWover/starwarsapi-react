@@ -27,7 +27,7 @@ function CharacterInfo({ location }) {
     <div>
       {characterInformations ? (
         <>
-          <h3>{characterInformations.name}</h3>
+          <h2 className="custom-font title-color">{characterInformations.name}</h2>
           <div>- Height: {characterInformations.height} cm.</div>
           <div>- Mass: {characterInformations.mass} kg.</div>
           <div>- Gender: {characterInformations.gender}</div>
