@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Spinner from "./utils/Spinner";
+import SearchBar from "./utils/Search";
 import Character from "./Character";
 import { getData } from "../api";
 
@@ -18,6 +19,7 @@ function Characters() {
       <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
         Characters
       </h2>
+      <SearchBar item="characters" />
       {allCharacters.results ? (
         <ul>
           {allCharacters.results.map(character => (
