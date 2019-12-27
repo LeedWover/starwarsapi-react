@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Spinner from "./utils/Spinner";
+import Crawl from './utils/Crawl';
 import { getData } from "../api";
 
 function FilmInfo({ location }) {
@@ -17,11 +18,11 @@ function FilmInfo({ location }) {
     <div>
       {filmInformations ? (
         <>
-          <h3>{filmInformations.title}</h3>
+          <h2 className="Custom-font" style={{ color: '#E6AB03' }}>{filmInformations.title}</h2>
           <div>- Director: {filmInformations.director}</div>
           <div>- Producers: {filmInformations.producer}</div>
           <div>- Release date: {filmInformations.release_date}</div>
-          <div>- Opening crawl: {filmInformations.opening_crawl}</div>
+          <Crawl title={filmInformations.title} crawl={filmInformations.opening_crawl} />
         </>
       ) : (
         <Spinner />

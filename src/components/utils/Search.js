@@ -10,7 +10,6 @@ function Search({ type, def,  set }) {
     event.preventDefault();
     setText("");
     set(`${def}?search=${text}`);
-
   };
 
   const clearSearch = () => set(def);
