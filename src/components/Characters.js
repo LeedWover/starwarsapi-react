@@ -6,7 +6,8 @@ import Character from "./Character";
 import { getData } from "../api";
 
 function Characters() {
-  const [url, setUrl] = useState("https://swapi.co/api/people/");
+  const defUrl = "https://swapi.co/api/people/";
+  const [url, setUrl] = useState(defUrl);
   const [allCharacters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ function Characters() {
       <h2 className="Custom-font" style={{ color: "#E6AB03" }}>
         Characters
       </h2>
-      <SearchBar item="characters" />
+      <SearchBar type="characters" set={setUrl} def={defUrl} />
       {allCharacters.results ? (
         <ul>
           {allCharacters.results.map(character => (

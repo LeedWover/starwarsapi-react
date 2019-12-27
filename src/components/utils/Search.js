@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Search({ item }) {
+function Search({ type, def,  set }) {
+  const [text, setText] = useState("");
+  const handleChange = event => {
+    setText(event.target.value);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setText("");
+    set(`${def}?search=${text}`);
+
+  };
+
+  const clearSearch = () => set(def);
+
   return (
-    <form className="col s12">
+    <form onSubmit={handleSubmit} className="col s12">
       <div className="row">
-        <div className="input-field col s8 offset-s2">
+      <div className="input-field col s1 offset-s1">
+          <input onClick={clearSearch} type="button" value="Clear" className="btn red darken-4" />
+        </div>
+        <div className="input-field col s8">
           <input
-            placeholder={`Search for ${item}`}
+            style={{ color: "#fff" }}
+            placeholder={`Search for ${type}`}
             type="text"
+            value={text}
             className="validate"
+            onChange={handleChange}
           />
+        </div>
+        <div className="input-field col s1">
+          <input type="submit" value="Search" className="btn" />
         </div>
       </div>
     </form>
