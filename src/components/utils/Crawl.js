@@ -4,7 +4,7 @@ import './starwarsCrawl.css';
 
 function Crawl({ title, crawl }) {
   return (
-    <div>
+    <div className="crawl-wrapper">
       <div className="fade"></div>
 
       <section className="star-wars">
