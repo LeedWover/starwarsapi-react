@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Fade } from "react-reveal";
 
 import Spinner from "./utils/Spinner";
 import SearchBar from "./utils/Search";
@@ -7,6 +8,7 @@ import { getData } from "../api";
 
 function Characters() {
   const defUrl = "https://swapi.co/api/people/";
+  const [isSearch, setSearch] = useState(false);
   const [url, setUrl] = useState(defUrl);
   const [allCharacters, setCharacters] = useState([]);
 
@@ -17,10 +19,26 @@ function Characters() {
 
   return (
     <div className="row">
-      <h2  className="custom-font title-color">
-        Characters
-      </h2>
-      <SearchBar type="characters" set={setUrl} def={defUrl} />
+      {isSearch ? (
+        <Fade duration={2500}>
+          <i
+            onClick={() => setSearch(!isSearch)}
+            className="fas fa-caret-up title-color"
+            style={{ fontSize: "8em" }}
+          ></i>
+          <SearchBar type="characters" set={setUrl} def={defUrl} />
+        </Fade>
+      ) : (
+        <Fade>
+          <h2
+            onClick={() => setSearch(!isSearch)}
+            className="custom-font title-color"
+          >
+            Characters <i className="fas fa-search"></i>
+            <small> Search...</small>
+          </h2>
+        </Fade>
+      )}
       {allCharacters.results ? (
         <ul>
           {allCharacters.results.map(character => (
